@@ -27,7 +27,7 @@ func _on_show_timer_timeout():
 	var card1 = CardsSelected.card_selected[0];
 	var card2 = CardsSelected.card_selected[1];
 	
-	if card1.card_number == card2.card_number:
+	if card1.card_number == card2.card_number and card1.ID != card2.ID:
 		card1.get_parent().queue_free();
 		card2.get_parent().queue_free();
 	
